@@ -16,7 +16,11 @@ const AppHeader = () => {
 };
 
 const SearchPanel = () => {
-  return <input placeholder="search" />;
+  const serchText = 'type your text here';
+  const searchStyle = {
+    fontSize: '20px'
+  }
+  return <input style={searchStyle} placeholder={serchText} />;
 };
 
 const Today = () => {
