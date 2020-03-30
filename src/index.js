@@ -25,14 +25,16 @@ const Today = () => {
 
 const App = () => {
   const login = <span>Log in please</span>
+  const greeting = <span>welcome back</span>
   const isLoggedIn = true;
+
   return (
     <div>
       <Today />
       <AppHeader />
       <SearchPanel />
       <TodoList />
-      {(isLoggedIn) ? null : login}
+      {(isLoggedIn) ? greeting : login}
     </div>
   );
 };
