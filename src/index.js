@@ -4,13 +4,14 @@ import AppHeader from "./components/app-header";
 import SearchPanel from "./components/search-panel";
 import TodoList from "./components/todo-list";
 import Today from "./components/today";
+import ItemStatusFilter from './components/item-status-filter';
 
 const todoData = [
-  {label: 'do something', important: false},
-  {label: 'redo something', important: false},
-  {label: 'make it better', important: false},
-  {label: 'learn react', important: true},
-  {label: 'remake all', important: false},
+  {label: 'do something', important: false, id: 1},
+  {label: 'redo something', important: false, id: 2},
+  {label: 'make it better', important: false, id: 3},
+  {label: 'learn react', important: true, id: 4},
+  {label: 'remake all', important: false, id: 5},
 ]
 
 const App = () => {
@@ -21,8 +22,9 @@ const App = () => {
   return (
     <div>
       <Today />
-      <AppHeader />
+      <AppHeader toDo='1' done='2'/>
       <SearchPanel />
+      <ItemStatusFilter />
       <TodoList todos={todoData}/>
       {isLoggedIn ? greeting : login}
     </div>
