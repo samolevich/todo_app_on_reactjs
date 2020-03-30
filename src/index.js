@@ -1,35 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-const TodoList = () => {
-  const points = ["Learn React", "Build Perfect App"];
-  return (
-    <ul>
-      <li>{points[0]}</li>
-      <li>{points[1]}</li>
-    </ul>
-  );
-};
-
-const AppHeader = () => {
-  return <h1>To Do List</h1>;
-};
-
-const SearchPanel = () => {
-  const serchText = 'type your text here';
-  const searchStyle = {
-    fontSize: '20px'
-  }
-  return <input style={searchStyle} placeholder={serchText} />;
-};
-
-const Today = () => {
-  return (String(new Date()))
-}
+import AppHeader from "./components/app-header";
+import SearchPanel from "./components/search-panel";
+import TodoList from "./components/todo-list";
+import Today from "./components/today";
 
 const App = () => {
-  const login = <span>Log in please</span>
-  const greeting = <span>welcome back</span>
+  const login = <span>Log in please</span>;
+  const greeting = <span>welcome back</span>;
   const isLoggedIn = true;
 
   return (
@@ -38,7 +16,7 @@ const App = () => {
       <AppHeader />
       <SearchPanel />
       <TodoList />
-      {(isLoggedIn) ? greeting : login}
+      {isLoggedIn ? greeting : login}
     </div>
   );
 };
