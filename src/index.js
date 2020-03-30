@@ -18,12 +18,14 @@ const SearchPanel = () => {
   return <input placeholder="search" />;
 };
 
-const element = (
-  <div>
-    <AppHeader />
-    <SearchPanel />
-    <TodoList />
-  </div>
-);
+const App = () => {
+  return (
+    <div>
+      <AppHeader />
+      <SearchPanel />
+      <TodoList />
+    </div>
+  );
+};
 
-ReactDOM.render(element, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
